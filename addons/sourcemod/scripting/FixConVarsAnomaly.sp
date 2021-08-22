@@ -200,7 +200,7 @@ public void OnPluginStart()
 	g_hArrayCvarValues = new ArrayList(ByteCountToCells(MAX_CVAR_VALUE_LENGTH));
 	g_hArrayCmdLen = new ArrayList(ByteCountToCells(4));
 	
-	AutoExecConfigSmart(true);
+	AutoExecConfigSmart(true, "FixConVarsAnomaly");
 	
 	g_hCvarAutoFix.AddChangeHook(ConVarChanged);
 	g_hCvarFixOnRoundStart.AddChangeHook(ConVarChanged);
