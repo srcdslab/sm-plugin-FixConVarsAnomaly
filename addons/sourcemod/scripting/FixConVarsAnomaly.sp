@@ -1,4 +1,4 @@
-#define PLUGIN_VERSION		"1.8"
+#define PLUGIN_VERSION		"1.9"
 
 /*=======================================================================================
 	Plugin Info:
@@ -310,7 +310,7 @@ void FillCmds() // thanks to SilverShot
 	g_hArrayCmds.Clear();
 	
 	hCmd = FindFirstConCommand(name, sizeof(name), isCommand);
-	if(hCmd != INVALID_HANDLE)
+	if(hCmd != null)
 	{
 		do {
 			if( isCommand )
@@ -803,6 +803,6 @@ void StringToLog(char[] Str)
 	}
 	if (g_hLog) {
 		g_hLog.WriteLine(Str);
-		FlushFile(g_hLog);
+		g_hLog.Flush();
 	}
 }
