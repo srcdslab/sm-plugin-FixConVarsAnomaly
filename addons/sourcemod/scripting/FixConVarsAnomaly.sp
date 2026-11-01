@@ -257,7 +257,6 @@ public void ConVarChanged_Cheats(ConVar convar, const char[] oldValue, const cha
 Action Timer_FixCvars(Handle timer)
 {
 	OnAutoConfigsBuffered();
-	return Plugin_Stop;
 }
 
 public void ConVarChanged(ConVar convar, const char[] oldValue, const char[] newValue)
